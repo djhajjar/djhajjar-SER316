@@ -42,10 +42,10 @@ public class BlackBoxGiven {
 	}
 
 	Cart cart1, cart2, cart3, cart4, cart5, cart6, cart7, cart8, cart9, cart10, cart11, cart12, cart13, cart14, cart15,
-			cart16;
+			cart16, cart17, cart18;
 	double cart1Expected, cart2Expected, cart3Expected, cart4Expected, cart5Expected, cart6Expected, cart7Expected,
 			cart8Expected, cart9Expected, cart10Expected, cart11Expected, cart12Expected, cart13Expected,
-			cart14Expected, cart15Expected, cart16Expected;
+			cart14Expected, cart15Expected, cart16Expected, cart17Expected, cart18Expected;
 	double cart2b, cart2c, cart2d, cart2e;
 
 	private void addItemsToCart(Cart cart, int dairy, int meat, int produce, int alcohol, int forzenFood) {
@@ -68,7 +68,7 @@ public class BlackBoxGiven {
 	@org.junit.Before
 	public void setUp() throws Exception {
 		cart1 = createCart(40); // Empty
-		cart2 = createCart(40); // Dairy
+		cart2 = createCart(20); // Dairy, also underage
 		cart3 = createCart(40); // Meat
 		cart4 = createCart(40); // Produce
 		cart5 = createCart(40); // Alcohol
@@ -80,9 +80,11 @@ public class BlackBoxGiven {
 		cart11 = createCart(40); // 4 produce
 		cart12 = createCart(40); // all deals -> 3 produce, 1 of everything else
 		cart13 = createCart(21); // just of age
-		cart14 = createCart(22);
-		cart15 = createCart(22);
-		cart16 = createCart(23);
+		cart14 = createCart(22); // 2 alcohol, 2 frozen food
+		cart15 = createCart(22); // 2 alcohol, 1 frozen food
+		cart16 = createCart(23); // 1 alcohol, 2 frozen food
+		cart17 = createCart(40); // 6 produce
+		cart18 = createCart(20); // underage, 1 alcohol, 1 frozen
 
 		addItemsToCart(cart1, 0, 0, 0, 0, 0);
 		addItemsToCart(cart2, 1, 0, 0, 0, 0);
@@ -100,6 +102,8 @@ public class BlackBoxGiven {
 		addItemsToCart(cart14, 0, 0, 0, 2, 2);
 		addItemsToCart(cart15, 0, 0, 0, 2, 1);
 		addItemsToCart(cart16, 0, 0, 0, 1, 2);
+		addItemsToCart(cart17, 0, 0, 6, 0, 0);
+		addItemsToCart(cart18, 0, 0, 0, 1, 1);
 
 		cart1Expected = 0.0;
 		cart2Expected = 3.24;
@@ -117,6 +121,8 @@ public class BlackBoxGiven {
 		cart14Expected = 21.6;
 		cart15Expected = 19.44;
 		cart16Expected = 16.2;
+		cart17Expected = 10.8;
+		cart18Expected = 0;
 
 		cart2b = 3.27;
 		cart2c = 3.3;
@@ -242,5 +248,17 @@ public class BlackBoxGiven {
 	public void calcCostCart16() throws UnderAgeException {
 		double amount = cart16.calcCost();
 		assertEquals(cart16Expected, amount, .01);
+	}
+
+	@Test
+	public void calcCostCart17() throws UnderAgeException {
+		double amount = cart17.calcCost();
+		assertEquals(cart17Expected, amount, .01);
+	}
+
+	@Test
+	public void calcCostCart18() throws UnderAgeException {
+		double amount = cart18.calcCost();
+		assertEquals(cart18Expected, amount, .01);
 	}
 }
