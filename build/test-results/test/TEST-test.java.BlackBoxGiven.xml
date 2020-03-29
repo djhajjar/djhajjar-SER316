@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test.java.BlackBoxGiven" tests="6" skipped="0" failures="2" errors="0" timestamp="2020-03-29T13:03:38" hostname="CYBERPOWER1080" time="0.007">
+<testsuite name="test.java.BlackBoxGiven" tests="6" skipped="0" failures="2" errors="0" timestamp="2020-03-29T14:01:56" hostname="CYBERPOWER1080" time="0.007">
   <properties/>
-  <testcase name="calcCostCart1[0]" classname="test.java.BlackBoxGiven" time="0.006">
+  <testcase name="calcCostCart1[0]" classname="test.java.BlackBoxGiven" time="0.005">
     <failure message="java.lang.AssertionError: expected:&lt;70.2&gt; but was:&lt;65.0&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;70.2&gt; but was:&lt;65.0&gt;
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
 	at org.junit.Assert.assertEquals(Assert.java:553)
 	at org.junit.Assert.assertEquals(Assert.java:683)
-	at test.java.BlackBoxGiven.calcCostCart1(BlackBoxGiven.java:80)
+	at test.java.BlackBoxGiven.calcCostCart1(BlackBoxGiven.java:73)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -66,14 +66,14 @@
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
   </testcase>
-  <testcase name="calcCostCart1[1]" classname="test.java.BlackBoxGiven" time="0.0"/>
+  <testcase name="calcCostCart1[1]" classname="test.java.BlackBoxGiven" time="0.001"/>
   <testcase name="calcCostCart1[2]" classname="test.java.BlackBoxGiven" time="0.0">
     <failure message="java.lang.AssertionError: expected:&lt;70.2&gt; but was:&lt;65.88&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;70.2&gt; but was:&lt;65.88&gt;
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
 	at org.junit.Assert.assertEquals(Assert.java:553)
 	at org.junit.Assert.assertEquals(Assert.java:683)
-	at test.java.BlackBoxGiven.calcCostCart1(BlackBoxGiven.java:80)
+	at test.java.BlackBoxGiven.calcCostCart1(BlackBoxGiven.java:73)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -132,9 +132,9 @@
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
   </testcase>
-  <testcase name="calcCostCart1[3]" classname="test.java.BlackBoxGiven" time="0.001"/>
+  <testcase name="calcCostCart1[3]" classname="test.java.BlackBoxGiven" time="0.0"/>
   <testcase name="calcCostCart1[4]" classname="test.java.BlackBoxGiven" time="0.0"/>
-  <testcase name="calcCostCart1[5]" classname="test.java.BlackBoxGiven" time="0.0"/>
+  <testcase name="calcCostCart1[5]" classname="test.java.BlackBoxGiven" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
