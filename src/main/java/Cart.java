@@ -93,7 +93,7 @@ public class Cart {
                 newTotal = totalBT * .07;
                 break;
             default:
-                return totalBT;
+                return 0;
         }
         return newTotal;
     }
