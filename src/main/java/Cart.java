@@ -5,9 +5,9 @@ import java.util.List;
 
 public class Cart {
 
-    protected int userAge;
-    public List<Product> cart;
-    public int cartStorage;
+    private int userAge;
+    private List<Product> cart;
+	private int cartStorage;
 
     /**
      * Calculates the final cost after all savings and tax has been applied. Also checks
@@ -119,4 +119,23 @@ public class Cart {
         userAge = age;
         cart = new ArrayList<Product>();
     }
+
+	public int getCartStorage() {
+		return cartStorage;
+	}
+
+	public void setCartStorage(int cartStorage) {
+		this.cartStorage = cartStorage;
+	}
+    public int getUserAge() {
+		return userAge;
+	}
+
+	public void setUserAge(int userAge) {
+		this.userAge = userAge;
+	}
+
+	public List<Product> getCart() {
+		return cart;
+	}
 }
