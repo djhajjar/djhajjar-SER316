@@ -28,7 +28,46 @@ public class Cart {
      * @throws UnderAgeException
      */
     public double calcCost() throws UnderAgeException {
-        return 0; //implement me, will be important for assignment 4 (nothing to do here for assignment 3)
+    	double cost = 0;
+
+    	int produceCounter = 0;
+    	int alcoholCounter = 0;
+    	int frozenCounter = 0;
+
+    	for(Product product : cart) {
+    		cost += product.getCost();
+
+    		if(product instanceof Produce) {
+    			produceCounter++;
+
+    			if(produceCounter >= 3) {
+    				cost -= 1;
+    				produceCounter = 0;
+    			}
+    		} else if(product instanceof Alcohol) {
+    			alcoholCounter++;
+
+    			if(this.userAge < 21) {
+    				throw new UnderAgeException("Cart Owner must be 21 or over to purchase alcohol");
+    			}
+
+    			if(alcoholCounter >= 1 && produceCounter >= 1) {
+    				cost -= 3;
+    				alcoholCounter--;
+    				produceCounter--;
+    			}
+    		} else if (product instanceof FrozenFood) {
+    			frozenCounter++;
+
+    			if(alcoholCounter >= 1 && frozenCounter >= 1) {
+    				cost -= 3;
+    				alcoholCounter--;
+    				frozenCounter--;
+    			}
+    		}
+    	}
+
+    	return cost + this.getTax(cost, "AZ");
     }
 
     // calculates how much was saved in the current shopping cart based on the deals, returns the saved amount
