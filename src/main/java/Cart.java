@@ -106,7 +106,7 @@ public class Cart {
     {
     		boolean test = false;
         for (int i = 0; i < cart.size(); i++) {
-            if (cart.get(i) == productToRemove) {
+            if (cart.get(i).equals(productToRemove)) {
                  cart.remove(i);
                  test = true;
                  return test;
