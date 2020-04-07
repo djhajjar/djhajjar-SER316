@@ -80,13 +80,12 @@ public class Cart {
         double produce_counter = 0;
         int alcoholCounter = 0;
         int frozenFoodCounter = 0;
-        int dairyCounter = 0;
 
         for(int i = 0; i < cart.size(); i++) {
             subTotal += cart.get(i).getCost();
-            costAfterSavings =costAfterSavings+cart.get(i).getCost();
+            costAfterSavings += cart.get(i).getCost(); // cleaned up code for readability
 
-            if (cart.get(i).getClass().toString() == Produce.class.toString()) {
+            if (cart.get(i) instanceof Produce) { // corrected syntax to incorporate instanceof
                 produce_counter++;
 
                 if (produce_counter >= 3) {
@@ -94,20 +93,20 @@ public class Cart {
                     produce_counter = 0;
                 }
             }
-            else if (cart.get(i).getClass().toString()==Alcohol.class.toString()) {
+            else if (cart.get(i) instanceof Alcohol) { // corrected syntax to incorporate instanceof
                 alcoholCounter++;
                 if (userAge < 21) {
                     throw new UnderAgeException("The User is not of age to purchase alcohol!");
                 }
             }
-            else if (cart.get(i).getClass().toString() == FrozenFood.class.toString()) {
+            else if (cart.get(i) instanceof FrozenFood) { // corrected syntax to incorporate instanceof
                 frozenFoodCounter++;
             }
-            else if (cart.get(i).getClass().toString() == FrozenFood.class.toString())
-                dairyCounter++;
+
+            // removed excess code that was tracking dairy counter
 
             if (alcoholCounter >= 1 && frozenFoodCounter >= 1) {
-                 costAfterSavings = costAfterSavings + 3;
+                 costAfterSavings -= 3; // added instead of subtracted
                  alcoholCounter--;
                  frozenFoodCounter--;
             }
@@ -128,6 +127,7 @@ public class Cart {
                 break;
             case "NY":
                 newTotal = totalBT * .1;
+                break; // why isn't this here?
             case "CO":
                 newTotal = totalBT * .07;
                 break;
@@ -145,7 +145,7 @@ public class Cart {
     {
     		boolean test = false;
         for (int i = 0; i < cart.size(); i++) {
-            if (cart.get(i) == productToRemove) {
+            if (cart.get(i).getCost() == productToRemove.getCost()) { // changed to check cost instead of object equality
                  cart.remove(i);
                  test = true;
                  return test;
