@@ -1,6 +1,19 @@
 package test.java;
 
-import main.java.*;
+import main.java.Alcohol;
+import main.java.Cart;
+import main.java.Cart0;
+import main.java.Cart1;
+import main.java.Cart2;
+import main.java.Cart3;
+import main.java.Cart4;
+import main.java.Cart5;
+import main.java.Dairy;
+import main.java.FrozenFood;
+import main.java.Meat;
+import main.java.Produce;
+import main.java.UnderAgeException;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -9,14 +22,7 @@ import java.lang.reflect.Constructor;
 import java.util.Arrays;
 import java.util.Collection;
 
-import main.java.Cart;
-import main.java.Cart1;
-import main.java.Cart2;
-import main.java.Cart3;
-import main.java.Cart4;
-import main.java.Cart5;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class BlackBoxGiven {
@@ -49,20 +55,25 @@ public class BlackBoxGiven {
     double cart2b, cart2c, cart2d, cart2e;
 
     private void addItemsToCart(Cart cart, int dairy, int meat, int produce, int alcohol, int forzenFood) {
-        for (int i = 0; i < dairy; i++)
+        for (int i = 0; i < dairy; i++) {
             cart.addItem(new Dairy());
+        }
 
-        for (int i = 0; i < meat; i++)
+        for (int i = 0; i < meat; i++) {
             cart.addItem(new Meat());
+        }
 
-        for (int i = 0; i < produce; i++)
+        for (int i = 0; i < produce; i++) {
             cart.addItem(new Produce());
+        }
 
-        for (int i = 0; i < alcohol; i++)
+        for (int i = 0; i < alcohol; i++) {
             cart.addItem(new Alcohol());
+        }
 
-        for (int i = 0; i < forzenFood; i++)
+        for (int i = 0; i < forzenFood; i++) {
             cart.addItem(new FrozenFood());
+        }
     }
 
     @org.junit.Before

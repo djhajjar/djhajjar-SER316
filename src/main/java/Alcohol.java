@@ -8,12 +8,4 @@ public class Alcohol extends Product {
     public int getCost() {
         return super.getCost();
     }
-
-	@Override
-	public boolean equals(Object obj) {
-		if (!(obj instanceof Alcohol))
-			return false;
-
-		return this.getCost() == ((Alcohol) obj).getCost();
-	}
 }

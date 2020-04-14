@@ -83,27 +83,21 @@ public class Cart {
 
         for (int i = 0; i < cart.size(); i++) {
             subTotal += cart.get(i).getCost();
-            costAfterSavings += cart.get(i).getCost(); // cleaned up code for
-                                                       // readability
+            costAfterSavings += cart.get(i).getCost();
 
-            if (cart.get(i) instanceof Produce) { // corrected syntax to
-                                                  // incorporate instanceof
+            if (cart.get(i) instanceof Produce) {
                 produce_counter++;
 
                 if (produce_counter >= 3) {
                     costAfterSavings -= 1;
                     produce_counter = 0;
                 }
-            } else if (cart.get(i) instanceof Alcohol) { // corrected syntax to
-                                                         // incorporate
-                                                         // instanceof
+            } else if (cart.get(i) instanceof Alcohol) {
                 alcoholCounter++;
                 if (userAge < 21) {
                     throw new UnderAgeException("The User is not of age to purchase alcohol!");
                 }
-            } else if (cart.get(i) instanceof FrozenFood) { // corrected syntax
-                                                            // to incorporate
-                                                            // instanceof
+            } else if (cart.get(i) instanceof FrozenFood) {
                 frozenFoodCounter++;
             }
 
@@ -122,6 +116,7 @@ public class Cart {
     // Gets the tax based on state and the total
     public double getTax(double totalBT, String twoLetterUSStateAbbreviation) {
         double newTotal = 0;
+
         switch (twoLetterUSStateAbbreviation) {
             case "AZ":
                 newTotal = totalBT * .08;
@@ -138,6 +133,7 @@ public class Cart {
             default:
                 return 0;
         }
+
         return newTotal;
     }
 
@@ -149,9 +145,9 @@ public class Cart {
         boolean test = false;
         for (int i = 0; i < cart.size(); i++) {
             if (cart.get(i).equals(productToRemove)) {
-                 cart.remove(i);
-                 test = true;
-                 return test;
+                cart.remove(i);
+                test = true;
+                return test;
             }
         }
         return false;
@@ -163,14 +159,14 @@ public class Cart {
     }
 
     public int getUserAge() {
-		return userAge;
-	}
+        return userAge;
+    }
 
-	public void setUserAge(int userAge) {
-		this.userAge = userAge;
-	}
+    public void setUserAge(int userAge) {
+        this.userAge = userAge;
+    }
 
-	public List<Product> getCart() {
-		return cart;
-	}
+    public List<Product> getCart() {
+        return cart;
+    }
 }
