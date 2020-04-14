@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>SpotBugs Report</title>
+<style type="text/css">
+		.tablerow0 {
+			background: #EEEEEE;
+		}
+
+		.tablerow1 {
+			background: white;
+		}
+
+		.detailrow0 {
+			background: #EEEEEE;
+		}
+
+		.detailrow1 {
+			background: white;
+		}
+
+		.tableheader {
+			background: #b9b9fe;
+			font-size: larger;
+		}
+
+		.tablerow0:hover, .tablerow1:hover {
+			background: #aaffaa;
+		}
+
+		.priority-1 {
+		    color: red;
+		    font-weight: bold;
+		}
+		.priority-2 {
+		    color: orange;
+		    font-weight: bold;
+		}
+		.priority-3 {
+		    color: green;
+		    font-weight: bold;
+		}
+		.priority-4 {
+		    color: blue;
+		    font-weight: bold;
+		}
+		</style>
+<script type="text/javascript">
+			function toggleRow(elid) {
+				if (document.getElementById) {
+					element = document.getElementById(elid);
+					if (element) {
+						if (element.style.display == 'none') {
+							element.style.display = 'block';
+							//window.status = 'Toggle on!';
+						} else {
+							element.style.display = 'none';
+							//window.status = 'Toggle off!';
+						}
+					}
+				}
+			}
+		</script>
+</head>
+<body>
+<h1>
+<a href="https://spotbugs.github.io/">SpotBugs</a> Report</h1>
+<h2>Project Information</h2>
+<p>Project: 
+		root project 'djhajjar-SER316' (main)</p>
+<p>SpotBugs version: 3.1.12</p>
+<p>Code analyzed:</p>
+<ul>
+<li>D:\SynologyDrive\School\ASU Online\SER 316\djhajjar-SER316\build\classes\java\main\main\java\Alcohol.class</li>
+<li>D:\SynologyDrive\School\ASU Online\SER 316\djhajjar-SER316\build\classes\java\main\main\java\Cart.class</li>
+<li>D:\SynologyDrive\School\ASU Online\SER 316\djhajjar-SER316\build\classes\java\main\main\java\Dairy.class</li>
+<li>D:\SynologyDrive\School\ASU Online\SER 316\djhajjar-SER316\build\classes\java\main\main\java\FrozenFood.class</li>
+<li>D:\SynologyDrive\School\ASU Online\SER 316\djhajjar-SER316\build\classes\java\main\main\java\Main.class</li>
+<li>D:\SynologyDrive\School\ASU Online\SER 316\djhajjar-SER316\build\classes\java\main\main\java\Meat.class</li>
+<li>D:\SynologyDrive\School\ASU Online\SER 316\djhajjar-SER316\build\classes\java\main\main\java\Produce.class</li>
+<li>D:\SynologyDrive\School\ASU Online\SER 316\djhajjar-SER316\build\classes\java\main\main\java\Product.class</li>
+<li>D:\SynologyDrive\School\ASU Online\SER 316\djhajjar-SER316\build\classes\java\main\main\java\UnderAgeException.class</li>
+</ul>
+<p>
+<br/>
+<br/>
+</p>
+<h2>Metrics</h2>
+<p>180 lines of code analyzed,
+	in 9 classes, 
+	in 1 packages.</p>
+<table width="500" cellpadding="5" cellspacing="2">
+<tr class="tableheader">
+<th align="left">Metric</th>
+<th align="right">Total</th>
+<th align="right">Density*</th>
+</tr>
+<tr class="tablerow0">
+<td>High Priority Warnings</td>
+<td align="right">5</td>
+<td align="right">27.78</td>
+</tr>
+<tr class="tablerow1">
+<td>Medium Priority Warnings</td>
+<td align="right">4</td>
+<td align="right">22.22</td>
+</tr>
+<tr class="$totalClass">
+<td>
+<b>Total Warnings</b>
+</td>
+<td align="right">
+<b>9</b>
+</td>
+<td align="right">
+<b>50.00</b>
+</td>
+</tr>
+</table>
+<p>
+<i>(* Defects per Thousand lines of non-commenting source statements)</i>
+</p>
+<p>
+<br/>
+<br/>
+</p>
+<h2>Contents</h2>
+<ul>
+<li>
+<a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</li>
+<li>
+<a href="#Warnings_CORRECTNESS">Correctness Warnings</a>
+</li>
+<li>
+<a href="#Details">Details</a>
+</li>
+</ul>
+<h1>Summary</h1>
+<table width="500" cellpadding="5" cellspacing="2">
+<tr class="tableheader">
+<th align="left">Warning Type</th>
+<th align="right">Number</th>
+</tr>
+<tr class="tablerow0">
+<td>
+<a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</td>
+<td align="right">5</td>
+</tr>
+<tr class="tablerow1">
+<td>
+<a href="#Warnings_CORRECTNESS">Correctness Warnings</a>
+</td>
+<td align="right">4</td>
+</tr>
+<tr class="tablerow0">
+<td>
+<b>Total</b>
+</td>
+<td align="right">
+<b>9</b>
+</td>
+</tr>
+</table>
+<h1>Warnings</h1>
+<p>Click on a warning row to see full context information.</p>
+<h2>
+<a name="Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N65661');">
+<td>
+<span class="priority-1">HE</span>
+</td>
+<td>main.java.Alcohol defines equals and uses Object.hashCode()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N65661" style="display: none;">
+<a href="#HE_EQUALS_USE_HASHCODE">Bug type HE_EQUALS_USE_HASHCODE (click for details)</a>
+<br/>In class main.java.Alcohol<br/>In method main.java.Alcohol.equals(Object)<br/>At Alcohol.java:[lines 14-17]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N65783');">
+<td>
+<span class="priority-1">HE</span>
+</td>
+<td>main.java.Dairy defines equals and uses Object.hashCode()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N65783" style="display: none;">
+<a href="#HE_EQUALS_USE_HASHCODE">Bug type HE_EQUALS_USE_HASHCODE (click for details)</a>
+<br/>In class main.java.Dairy<br/>In method main.java.Dairy.equals(Object)<br/>At Dairy.java:[lines 14-17]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N65905');">
+<td>
+<span class="priority-1">HE</span>
+</td>
+<td>main.java.Meat defines equals and uses Object.hashCode()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N65905" style="display: none;">
+<a href="#HE_EQUALS_USE_HASHCODE">Bug type HE_EQUALS_USE_HASHCODE (click for details)</a>
+<br/>In class main.java.Meat<br/>In method main.java.Meat.equals(Object)<br/>At Meat.java:[lines 14-17]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66027');">
+<td>
+<span class="priority-1">HE</span>
+</td>
+<td>main.java.Produce defines equals and uses Object.hashCode()</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66027" style="display: none;">
+<a href="#HE_EQUALS_USE_HASHCODE">Bug type HE_EQUALS_USE_HASHCODE (click for details)</a>
+<br/>In class main.java.Produce<br/>In method main.java.Produce.equals(Object)<br/>At Produce.java:[lines 14-17]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66080');">
+<td>
+<span class="priority-1">HE</span>
+</td>
+<td>main.java.Product defines equals and uses Object.hashCode()</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66080" style="display: none;">
+<a href="#HE_EQUALS_USE_HASHCODE">Bug type HE_EQUALS_USE_HASHCODE (click for details)</a>
+<br/>In class main.java.Product<br/>In method main.java.Product.equals(Object)<br/>At Product.java:[lines 16-19]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_CORRECTNESS">Correctness Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N65592');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>main.java.Alcohol overrides equals in Product and may not be symmetric</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N65592" style="display: none;">
+<a href="#EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC">Bug type EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC (click for details)</a>
+<br/>In class main.java.Alcohol<br/>In method main.java.Alcohol.equals(Object)<br/>Overrides main.java.Product.equals(Object)<br/>At Alcohol.java:[lines 14-17]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N65714');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>main.java.Dairy overrides equals in Product and may not be symmetric</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N65714" style="display: none;">
+<a href="#EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC">Bug type EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC (click for details)</a>
+<br/>In class main.java.Dairy<br/>In method main.java.Dairy.equals(Object)<br/>Overrides main.java.Product.equals(Object)<br/>At Dairy.java:[lines 14-17]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N65836');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>main.java.Meat overrides equals in Product and may not be symmetric</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N65836" style="display: none;">
+<a href="#EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC">Bug type EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC (click for details)</a>
+<br/>In class main.java.Meat<br/>In method main.java.Meat.equals(Object)<br/>Overrides main.java.Product.equals(Object)<br/>At Meat.java:[lines 14-17]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N65958');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>main.java.Produce overrides equals in Product and may not be symmetric</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N65958" style="display: none;">
+<a href="#EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC">Bug type EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC (click for details)</a>
+<br/>In class main.java.Produce<br/>In method main.java.Produce.equals(Object)<br/>Overrides main.java.Product.equals(Object)<br/>At Produce.java:[lines 14-17]</p>
+</td>
+</tr>
+</table>
+<h1>
+<a name="Details">Details</a>
+</h1>
+<h2>
+<a name="EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC">EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC: equals method overrides equals in superclass and may not be symmetric</a>
+</h2>
+
+  <p> This class defines an equals method that overrides an equals method in a superclass. Both equals methods
+methods use <code>instanceof</code> in the determination of whether two objects are equal. This is fraught with peril,
+since it is important that the equals method is symmetrical (in other words, <code>a.equals(b) == b.equals(a)</code>).
+If B is a subtype of A, and A's equals method checks that the argument is an instanceof A, and B's equals method
+checks that the argument is an instanceof B, it is quite likely that the equivalence relation defined by these
+methods is not symmetric.
+</p>
+
+    
+<h2>
+<a name="HE_EQUALS_USE_HASHCODE">HE_EQUALS_USE_HASHCODE: Class defines equals() and uses Object.hashCode()</a>
+</h2>
+
+  <p> This class overrides <code>equals(Object)</code>, but does not
+  override <code>hashCode()</code>, and inherits the implementation of
+  <code>hashCode()</code> from <code>java.lang.Object</code> (which returns
+  the identity hash code, an arbitrary value assigned to the object
+  by the VM).&nbsp; Therefore, the class is very likely to violate the
+  invariant that equal objects must have equal hashcodes.</p>
+
+<p>If you don't think instances of this class will ever be inserted into a HashMap/HashTable,
+the recommended <code>hashCode</code> implementation to use is:</p>
+<pre><code>public int hashCode() {
+    assert false : "hashCode not designed";
+    return 42; // any arbitrary constant will do
+}
+</code></pre>
+
+    </body>
+</html>

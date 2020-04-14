@@ -1,2 +1,6 @@
 language: java
+<<<<<<< HEAD
 jdk: openjdk11
+=======
+jdk: openjdk11
+>>>>>>> StaticAnalysis
