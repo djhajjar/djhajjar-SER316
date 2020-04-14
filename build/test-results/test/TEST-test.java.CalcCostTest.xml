@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test.java.CartTest" tests="6" skipped="0" failures="2" errors="0" timestamp="2020-04-14T02:16:30" hostname="CYBERPOWER1080" time="0.002">
+<testsuite name="test.java.CalcCostTest" tests="22" skipped="0" failures="2" errors="0" timestamp="2020-04-14T02:16:30" hostname="CYBERPOWER1080" time="0.007">
   <properties/>
-  <testcase name="taxTest" classname="test.java.CartTest" time="0.001"/>
-  <testcase name="calcCostTest" classname="test.java.CartTest" time="0.0"/>
-  <testcase name="calcCostError" classname="test.java.CartTest" time="0.001">
+  <testcase name="calcCostCart1" classname="test.java.CalcCostTest" time="0.001"/>
+  <testcase name="calcCostCart2" classname="test.java.CalcCostTest" time="0.0"/>
+  <testcase name="calcCostCart3" classname="test.java.CalcCostTest" time="0.0"/>
+  <testcase name="calcCostCart4" classname="test.java.CalcCostTest" time="0.0"/>
+  <testcase name="calcCostCart5" classname="test.java.CalcCostTest" time="0.0"/>
+  <testcase name="calcCostCart6" classname="test.java.CalcCostTest" time="0.002">
     <failure message="main.java.UnderAgeException: Cart Owner must be 21 or over to purchase alcohol" type="main.java.UnderAgeException">main.java.UnderAgeException: Cart Owner must be 21 or over to purchase alcohol
 	at main.java.Cart.calcCost(Cart.java:48)
-	at test.java.CartTest.calcCostError(CartTest.java:70)
+	at test.java.CalcCostTest.calcCostCart6(CalcCostTest.java:156)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -16,7 +19,6 @@
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
 	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
@@ -58,12 +60,21 @@
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
   </testcase>
-  <testcase name="amountSavedNoErrors" classname="test.java.CartTest" time="0.0"/>
-  <testcase name="removeItemTest" classname="test.java.CartTest" time="0.0"/>
-  <testcase name="amountSavedException" classname="test.java.CartTest" time="0.0">
-    <failure message="main.java.UnderAgeException: The User is not of age to purchase alcohol!" type="main.java.UnderAgeException">main.java.UnderAgeException: The User is not of age to purchase alcohol!
-	at main.java.Cart.Amount_saved(Cart.java:102)
-	at test.java.CartTest.amountSavedException(CartTest.java:58)
+  <testcase name="calcCostCart7" classname="test.java.CalcCostTest" time="0.0"/>
+  <testcase name="calcCostCart8" classname="test.java.CalcCostTest" time="0.0"/>
+  <testcase name="calcCostCart9" classname="test.java.CalcCostTest" time="0.0"/>
+  <testcase name="calcCostCart10" classname="test.java.CalcCostTest" time="0.0"/>
+  <testcase name="calcCostCart11" classname="test.java.CalcCostTest" time="0.0"/>
+  <testcase name="calcCostCart12" classname="test.java.CalcCostTest" time="0.0"/>
+  <testcase name="calcCostCart13" classname="test.java.CalcCostTest" time="0.0"/>
+  <testcase name="calcCostCart14" classname="test.java.CalcCostTest" time="0.0"/>
+  <testcase name="calcCostCart15" classname="test.java.CalcCostTest" time="0.0"/>
+  <testcase name="calcCostCart16" classname="test.java.CalcCostTest" time="0.0"/>
+  <testcase name="calcCostCart17" classname="test.java.CalcCostTest" time="0.0"/>
+  <testcase name="calcCostCart18" classname="test.java.CalcCostTest" time="0.0">
+    <failure message="main.java.UnderAgeException: Cart Owner must be 21 or over to purchase alcohol" type="main.java.UnderAgeException">main.java.UnderAgeException: Cart Owner must be 21 or over to purchase alcohol
+	at main.java.Cart.calcCost(Cart.java:48)
+	at test.java.CalcCostTest.calcCostCart18(CalcCostTest.java:228)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -73,7 +84,6 @@
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
 	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
@@ -115,6 +125,10 @@
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
   </testcase>
+  <testcase name="calcCostCart2b" classname="test.java.CalcCostTest" time="0.0"/>
+  <testcase name="calcCostCart2c" classname="test.java.CalcCostTest" time="0.0"/>
+  <testcase name="calcCostCart2d" classname="test.java.CalcCostTest" time="0.0"/>
+  <testcase name="calcCostCart2e" classname="test.java.CalcCostTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

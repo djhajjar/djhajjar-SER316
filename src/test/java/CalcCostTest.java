@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import main.java.*;
 
-public class calcCostTest {
+public class CalcCostTest { // SER316 TASK 2 SPOTBUGS FIX - renamed class
     Cart cart1, cart2, cart3, cart4, cart5, cart6, cart7, cart8, cart9, cart10, cart11, cart12, cart13, cart14, cart15,
             cart16, cart17, cart18;
     double cart1Expected, cart2Expected, cart3Expected, cart4Expected, cart5Expected, cart6Expected, cart7Expected,

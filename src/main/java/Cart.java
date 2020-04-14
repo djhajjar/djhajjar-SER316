@@ -7,7 +7,7 @@ public class Cart {
 
     protected int userAge;
     public List<Product> cart;
-    public int cartStorage;
+    // SER316 Task 2 SPOTBUGS FIX - removed cartStorage
 
     /**
      * Calculates the final cost after all savings and tax has been applied.

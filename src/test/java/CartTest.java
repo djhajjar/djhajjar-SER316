@@ -80,8 +80,9 @@ public class CartTest {
         assertEquals(1, cart1.getTax(1.0, "LA"), 0.1);
     }
 
+    // SER316 TASK 2 SPOTBUGS FIX - renamed method name
     @Test
-    public void RemoveItemTest() {
+    public void removeItemTest() {
         assertTrue(cart1.removeItem(new FrozenFood()));
         assertFalse(cart1.removeItem(new FrozenFood()));
     }
