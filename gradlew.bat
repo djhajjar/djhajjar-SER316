@@ -17,7 +17,11 @@
 @if "%DEBUG%" == "" @echo off
 @rem ##########################################################################
 @rem
-@rem  Code Spring 2020 given startup script for Windows
+<<<<<<< HEAD:build/scripts/djhajjar-SER316.bat
+@rem  djhajjar-SER316 startup script for Windows
+=======
+@rem  Gradle startup script for Windows
+>>>>>>> master:gradlew.bat
 @rem
 @rem ##########################################################################
 
@@ -27,13 +31,18 @@ if "%OS%"=="Windows_NT" setlocal
 set DIRNAME=%~dp0
 if "%DIRNAME%" == "" set DIRNAME=.
 set APP_BASE_NAME=%~n0
-set APP_HOME=%DIRNAME%..
+set APP_HOME=%DIRNAME%
 
 @rem Resolve any "." and ".." in APP_HOME to make it shorter.
 for %%i in ("%APP_HOME%") do set APP_HOME=%%~fi
 
-@rem Add default JVM options here. You can also use JAVA_OPTS and CODE_SPRING_2020_GIVEN_OPTS to pass JVM options to this script.
+<<<<<<< HEAD:build/scripts/djhajjar-SER316.bat
+@rem Add default JVM options here. You can also use JAVA_OPTS and DJHAJJAR_SE_R316_OPTS to pass JVM options to this script.
 set DEFAULT_JVM_OPTS=
+=======
+@rem Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
+set DEFAULT_JVM_OPTS="-Xmx64m" "-Xms64m"
+>>>>>>> master:gradlew.bat
 
 @rem Find java.exe
 if defined JAVA_HOME goto findJavaFromJavaHome
@@ -82,19 +91,32 @@ set CMD_LINE_ARGS=%*
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\Code Spring 2020 given.jar;%APP_HOME%\lib\cls;%APP_HOME%\lib\junit-4.12.jar;%APP_HOME%\lib\hamcrest-core-1.3.jar
+<<<<<<< HEAD:build/scripts/djhajjar-SER316.bat
+set CLASSPATH=%APP_HOME%\lib\djhajjar-SER316.jar;%APP_HOME%\lib\cls;%APP_HOME%\lib\junit-4.12.jar;%APP_HOME%\lib\hamcrest-core-1.3.jar
 
-@rem Execute Code Spring 2020 given
-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %CODE_SPRING_2020_GIVEN_OPTS%  -classpath "%CLASSPATH%" main.java.Main %CMD_LINE_ARGS%
+@rem Execute djhajjar-SER316
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %DJHAJJAR_SE_R316_OPTS%  -classpath "%CLASSPATH%" main.java.Main %CMD_LINE_ARGS%
+=======
+set CLASSPATH=%APP_HOME%\gradle\wrapper\gradle-wrapper.jar
+
+@rem Execute Gradle
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %GRADLE_OPTS% "-Dorg.gradle.appname=%APP_BASE_NAME%" -classpath "%CLASSPATH%" org.gradle.wrapper.GradleWrapperMain %CMD_LINE_ARGS%
+>>>>>>> master:gradlew.bat
 
 :end
 @rem End local scope for the variables with windows NT shell
 if "%ERRORLEVEL%"=="0" goto mainEnd
 
 :fail
-rem Set variable CODE_SPRING_2020_GIVEN_EXIT_CONSOLE if you need the _script_ return code instead of
+<<<<<<< HEAD:build/scripts/djhajjar-SER316.bat
+rem Set variable DJHAJJAR_SE_R316_EXIT_CONSOLE if you need the _script_ return code instead of
 rem the _cmd.exe /c_ return code!
-if  not "" == "%CODE_SPRING_2020_GIVEN_EXIT_CONSOLE%" exit 1
+if  not "" == "%DJHAJJAR_SE_R316_EXIT_CONSOLE%" exit 1
+=======
+rem Set variable GRADLE_EXIT_CONSOLE if you need the _script_ return code instead of
+rem the _cmd.exe /c_ return code!
+if  not "" == "%GRADLE_EXIT_CONSOLE%" exit 1
+>>>>>>> master:gradlew.bat
 exit /b 1
 
 :mainEnd

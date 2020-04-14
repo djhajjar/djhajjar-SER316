@@ -18,7 +18,11 @@
 
 ##############################################################################
 ##
-##  Code Spring 2020 given start up script for UN*X
+<<<<<<< HEAD:build/scripts/djhajjar-SER316
+##  djhajjar-SER316 start up script for UN*X
+=======
+##  Gradle start up script for UN*X
+>>>>>>> master:gradlew
 ##
 ##############################################################################
 
@@ -36,15 +40,23 @@ while [ -h "$PRG" ] ; do
     fi
 done
 SAVED="`pwd`"
-cd "`dirname \"$PRG\"`/.." >/dev/null
+cd "`dirname \"$PRG\"`/" >/dev/null
 APP_HOME="`pwd -P`"
 cd "$SAVED" >/dev/null
 
-APP_NAME="Code Spring 2020 given"
+<<<<<<< HEAD:build/scripts/djhajjar-SER316
+APP_NAME="djhajjar-SER316"
 APP_BASE_NAME=`basename "$0"`
 
-# Add default JVM options here. You can also use JAVA_OPTS and CODE_SPRING_2020_GIVEN_OPTS to pass JVM options to this script.
+# Add default JVM options here. You can also use JAVA_OPTS and DJHAJJAR_SE_R316_OPTS to pass JVM options to this script.
 DEFAULT_JVM_OPTS=""
+=======
+APP_NAME="Gradle"
+APP_BASE_NAME=`basename "$0"`
+
+# Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
+DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
+>>>>>>> master:gradlew
 
 # Use the maximum available, or set MAX_FD != -1 to use that value.
 MAX_FD="maximum"
@@ -80,7 +92,11 @@ case "`uname`" in
     ;;
 esac
 
-CLASSPATH=$APP_HOME/lib/Code Spring 2020 given.jar:$APP_HOME/lib/cls:$APP_HOME/lib/junit-4.12.jar:$APP_HOME/lib/hamcrest-core-1.3.jar
+<<<<<<< HEAD:build/scripts/djhajjar-SER316
+CLASSPATH=$APP_HOME/lib/djhajjar-SER316.jar:$APP_HOME/lib/cls:$APP_HOME/lib/junit-4.12.jar:$APP_HOME/lib/hamcrest-core-1.3.jar
+=======
+CLASSPATH=$APP_HOME/gradle/wrapper/gradle-wrapper.jar
+>>>>>>> master:gradlew
 
 # Determine the Java command to use to start the JVM.
 if [ -n "$JAVA_HOME" ] ; then
@@ -178,6 +194,10 @@ save () {
 APP_ARGS=`save "$@"`
 
 # Collect all arguments for the java command, following the shell quoting and substitution rules
-eval set -- $DEFAULT_JVM_OPTS $JAVA_OPTS $CODE_SPRING_2020_GIVEN_OPTS -classpath "\"$CLASSPATH\"" main.java.Main "$APP_ARGS"
+<<<<<<< HEAD:build/scripts/djhajjar-SER316
+eval set -- $DEFAULT_JVM_OPTS $JAVA_OPTS $DJHAJJAR_SE_R316_OPTS -classpath "\"$CLASSPATH\"" main.java.Main "$APP_ARGS"
+=======
+eval set -- $DEFAULT_JVM_OPTS $JAVA_OPTS $GRADLE_OPTS "\"-Dorg.gradle.appname=$APP_BASE_NAME\"" -classpath "\"$CLASSPATH\"" org.gradle.wrapper.GradleWrapperMain "$APP_ARGS"
+>>>>>>> master:gradlew
 
 exec "$JAVACMD" "$@"
