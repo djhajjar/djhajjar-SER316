@@ -1,7 +1,9 @@
 package main.java;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Cart {
 
@@ -115,26 +117,13 @@ public class Cart {
 
     // Gets the tax based on state and the total
     public double getTax(double totalBT, String twoLetterUSStateAbbreviation) {
-        double newTotal = 0;
+        Map<String, Double> taxeCodes = new HashMap<String, Double>();
+        taxeCodes.put("AZ", 0.08);
+        taxeCodes.put("CA", 0.09);
+        taxeCodes.put("NY", 0.1);
+        taxeCodes.put("CO", 0.07);
 
-        switch (twoLetterUSStateAbbreviation) {
-            case "AZ":
-                newTotal = totalBT * .08;
-                break;
-            case "CA":
-                newTotal = totalBT * .09;
-                break;
-            case "NY":
-                newTotal = totalBT * .1;
-                break; // why isn't this here?
-            case "CO":
-                newTotal = totalBT * .07;
-                break;
-            default:
-                return 0;
-        }
-
-        return newTotal;
+        return taxeCodes.getOrDefault(twoLetterUSStateAbbreviation, 0.0);
     }
 
     public void addItem(Product np) {
